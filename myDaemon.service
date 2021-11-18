@@ -1,0 +1,14 @@
+[Unit]
+Description=Manufacturing Daemon Process Manager
+
+[Service]
+User=root
+WorkingDirectory=/
+KillMode=process
+ExecStart=/usr/bin/manufacturingDaemon
+Restart=on-failure
+
+
+[Install]
+WantedBy=multi-user.target
+Alias=myDaemon.service
